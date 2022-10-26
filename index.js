@@ -1,7 +1,9 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-const Manager = require('./lib/Manager')
-const Engineer = require('./lib/Engineer')
+const Manager = require('./lib/Manager');
+const Engineer = require('./lib/Engineer');
+const Intern = require ('./lib/Intern')
+const createTeam = require("./dist/renderHTML.js");
 
 
 const empArray = [];
@@ -27,7 +29,7 @@ function initApp () {
                     break;
 
                 default:
-                    break;
+                    buildHtml();
             }
         })
     }
@@ -135,6 +137,12 @@ function initApp () {
         empArray.push(intern)
         empTeam();
     });
+ }
+
+ function buildHtml () {
+    console.log("Sucessfully created team!")
+
+    fs.writeFileSync("index.html", createTeam(empArray), "utf-8")
  }
 
 empTeam();
