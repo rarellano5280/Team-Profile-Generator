@@ -12,7 +12,8 @@ const createTeam = team => {
         <div class="card-body">
             <ul class="list-group">
                 <li class = "list-group-item">ID: ${manager.getId()}</li>
-                <li class = "list-group-item">Email:${manager.getEmail()}</li>
+                <li class = "list-group-item">Email: <a href="mailto:${manager.getEmail()}"> ${manager.getEmail()}</a></li>
+                <li class = "list-group-item">Office Number: ${manager.getOfficeNumber()}</li>
             </ul> 
         </div>
       </div>
@@ -30,8 +31,8 @@ const createTeam = team => {
         <div class="card-body">
             <ul class="list-group">
                 <li class = "list-group-item">ID: ${engineer.getRole()}</li>
-                <li class = "list-group-item">Email: <a href = ${engineer.getEmail()}</a></li>
-                <li class = "list-group-item">GitHub:<a href = ${engineer.getGithub()}</a></li>
+                <li class = "list-group-item">Email: <a href="mailto:${engineer.getEmail()}"> ${engineer.getEmail()}</a></li>
+                <li class = "list-group-item">GitHub: <a href="https://github.com/${engineer.getGithub()} target="_blank" rel="noopener noreferrer">${engineer.getGithub()}</a></li>
             </ul> 
         </div>
     </div>
@@ -49,7 +50,7 @@ const createTeam = team => {
         <div class="card-body">
             <ul class="list-group">
                 <li class = "list-group-item">ID: ${intern.getRole()}</li>
-                <li class = "list-group-item">Email: <a href = ${intern.getEmail()}</a></li>
+                <li class = "list-group-item">Email: <a href="mailto:${intern.getEmail()}"> ${intern.getEmail()}</a></li>
                 <li class = "list-group-item">School:${intern.getSchool()}</li>
             </ul> 
         </div>

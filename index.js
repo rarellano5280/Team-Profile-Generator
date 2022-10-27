@@ -64,6 +64,7 @@ function initApp () {
         }
     ]).then(answers => {
         const manager = new Manager(answers.managerGender, answers.managerName, answers.managerId, answers.managerEmail, answers.managerOfficeNumber)
+
         empArray.push(manager);
         empTeam();
     });
